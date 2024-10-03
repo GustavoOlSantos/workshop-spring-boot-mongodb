@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.gustavo_profissional.workshopmongo.domain.User;
 
 @RestController
-@RequestMapping(value="/users")
+@RequestMapping(value="/users") //=> Url
 public class UserResources {
 	
 	@GetMapping
