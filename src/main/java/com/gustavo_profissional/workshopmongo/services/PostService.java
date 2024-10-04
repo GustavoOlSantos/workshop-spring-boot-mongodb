@@ -1,5 +1,6 @@
 package com.gustavo_profissional.workshopmongo.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,9 @@ public class PostService {
 		Post foundPost = opPost.get();	
 		return foundPost;
 	}
-
+	
+	public List<Post> findByTitle(String text){
+		return repo.findByTitleContaining(text);
+	}
 
 }
