@@ -45,6 +45,9 @@ public class Instantiation implements CommandLineRunner {
 		
 		//=> Salva a lista no MongoDB (Salvar apenas um elemento, utilize o Save())
 		postRepository.saveAll(Arrays.asList(post1, post2));
+		
+		miles.getPosts().addAll(Arrays.asList(post1, post2));
+		userRepository.save(miles);
 	}
 
 }
