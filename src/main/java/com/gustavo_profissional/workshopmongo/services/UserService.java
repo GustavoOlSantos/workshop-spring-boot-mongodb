@@ -30,7 +30,7 @@ public class UserService {
 		Optional<User> opUser = repo.findById(id);
 		
 		if(!opUser.isPresent()) {
-			throw new ObjectNotFoundException("Objeto não encontrado");
+			throw new ObjectNotFoundException("Usuário não encontrado");
 		}
 		
 		User user = opUser.get();	
